@@ -6,18 +6,13 @@
 //
 
 import Foundation
+import UIKit.UIImage
 import CoreLocation
 
 class MapViewModel {
     
     // MARK: Callbacks or observers
-    
-    /// Callback for showing loader
-    var startLoading: (() -> Void)?
-    
-    /// Callback for removing the loader
-    var endLoading: (() -> Void)?
-    
+
     /// Callback for showing the error message
     var showError: ((String) -> Void)?
     
@@ -27,13 +22,16 @@ class MapViewModel {
     /// Callback returning all the map items
     var mapItems: (([MapItem]) -> Void)?
     
+    /// Callback with image of traffic camera
+    var cameraImage: ((UIImage?) -> Void)?
+    
     //MARK: Private properties
     private let apiClient: APIClient?
-//    private lazy var locationLists: Locations = []
-//    private var location: Location?
+    private let imageFetcher: ImageFetcher?
     
-    required init(with apiClient: TrafficImagesAPIClient) {
+    required init(with apiClient: TrafficImagesAPIClient, imageFetcher: ImageFetcher? = nil) {
         self.apiClient = apiClient
+        self.imageFetcher = imageFetcher
     }
     
     //MARK: Exposed functions
@@ -44,27 +42,33 @@ class MapViewModel {
     }
     
     func fetchTrafficCameras() {
-        self.startLoading?()
         self.apiClient?.fetchTrafficCameras({ [weak self] response in
             guard let _self = self else {
-                self?.endLoading?()
                 return
             }
-            DispatchQueue.main.async {
-                _self.endLoading?()
-                switch response {
-                case let .success(cameraDetails):
-                    _self.endLoading?()
-                    _self.parseFetchedCameraDetails(cameraDetails)
-                case let .failure(error):
-                    _self.showError?(error.localizedDescription)
-                }
+            switch response {
+            case let .success(cameraDetails):
+                _self.parseFetchedCameraDetails(cameraDetails)
+            case let .failure(error):
+                _self.showError?(error.localizedDescription)
             }
         })
     }
 
     func selectedMapItem(mapItem: MapItem) {
+        guard let image = mapItem.image else {
+            self.cameraImage?(UIImage(named: "placeholder"))
+            return
+        }
         
+        self.imageFetcher?.fetchContent(image) { [weak self] response in
+            switch response {
+            case let .success(image):
+                self?.cameraImage?(image)
+            case .failure(_):
+                self?.cameraImage?(UIImage(named: "placeholder"))
+            }
+        }
     }
     
     private func parseFetchedCameraDetails(_ cameraDetails: TrafficCameras) {

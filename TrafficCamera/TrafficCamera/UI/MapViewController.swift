@@ -11,17 +11,26 @@ import MapKit
 class MapViewController: UIViewController {
     
     @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var contentStackView: UIStackView!
+    @IBOutlet private weak var cancelButton: UIButton!
     
-    private let viewModel = MapViewModel(with: TrafficImagesAPIClient(baseURL: NetworkConstant.baseURL))
+    private let viewModel = MapViewModel(
+        with: TrafficImagesAPIClient(baseURL: NetworkConstant.baseURL),
+        imageFetcher: ImageFetcher()
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Traffic Cameras"
+        self.imageView.isHidden = true
+        self.cancelButton.isHidden = true
         
         self.mapView.delegate = self
         self.mapView.register(
             ClusterAnnotationView.self,
             forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+        
         mapView.register(
             MapItemAnnotationView.self,
             forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
@@ -30,32 +39,43 @@ class MapViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        
-        self.viewModel.startLoading = { [weak self] in
-            guard let _self = self else { return }
-            // Add Loader
-        }
-        
-        self.viewModel.endLoading = { [weak self] in
-            guard let _self = self else { return }
-            // End Loader
-        }
-        
+
         self.viewModel.showError = { [weak self] message in
             guard let _self = self else { return }
-            let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .default)
-            alertController.addAction(action)
-            _self.present(alertController, animated: true)
+            performOnMain {
+                let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .default)
+                alertController.addAction(action)
+                _self.present(alertController, animated: true)
+            }
         }
         
         self.viewModel.mapItems = { [weak self] items in
             guard let _self = self else { return }
-            _self.mapView.addAnnotations(items)
+            performOnMain {
+                _self.mapView.addAnnotations(items)
+            }
+        }
+        
+        self.viewModel.cameraImage = { [weak self] image in
+            guard let _self = self else { return }
+            performOnMain {
+                _self.imageView.isHidden = false
+                _self.cancelButton.isHidden = false
+                _self.imageView.image = image
+            }
         }
         
         self.viewModel.fetchTrafficCameras()
         self.viewModel.bindViewModel()
+    }
+    
+    @IBAction private func cancelButtonTapped() {
+        self.imageView.isHidden = true
+        self.cancelButton.isHidden = true
+        self.mapView.selectedAnnotations.forEach { annotation in
+            self.mapView.deselectAnnotation(annotation, animated: false)
+        }
     }
 }
 
@@ -71,8 +91,9 @@ extension MapViewController: MKMapViewDelegate {
             mapView.setRegion(zoomed, animated: true)
             
         case is MapItemAnnotationView:
-            print("dfrgrer")
-            
+            // is user taps on pin, then show the image
+            guard let annotation = view.annotation as? MapItem else { return }
+            self.viewModel.selectedMapItem(mapItem: annotation)
         default: return
             
         }

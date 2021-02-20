@@ -33,7 +33,8 @@
 		E54B5BAE25E0F0A300B14BC0 /* String+Cluster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BAD25E0F0A300B14BC0 /* String+Cluster.swift */; };
 		E54B5BB325E0F16000B14BC0 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BB225E0F16000B14BC0 /* ClusterAnnotationView.swift */; };
 		E54B5BB825E0F1EC00B14BC0 /* MapItemAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BB725E0F1EB00B14BC0 /* MapItemAnnotationView.swift */; };
-		E54B5BC025E0F41200B14BC0 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BBF25E0F41200B14BC0 /* UIImage+Resize.swift */; };
+		E54B5BC025E0F41200B14BC0 /* UIImage+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BBF25E0F41200B14BC0 /* UIImage+Enhancements.swift */; };
+		E54B5BC525E0FA6D00B14BC0 /* ThreadUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BC425E0FA6D00B14BC0 /* ThreadUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +87,8 @@
 		E54B5BAD25E0F0A300B14BC0 /* String+Cluster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Cluster.swift"; sourceTree = "<group>"; };
 		E54B5BB225E0F16000B14BC0 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		E54B5BB725E0F1EB00B14BC0 /* MapItemAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemAnnotationView.swift; sourceTree = "<group>"; };
-		E54B5BBF25E0F41200B14BC0 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		E54B5BBF25E0F41200B14BC0 /* UIImage+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Enhancements.swift"; sourceTree = "<group>"; };
+		E54B5BC425E0FA6D00B14BC0 /* ThreadUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +254,8 @@
 			children = (
 				E54B5BA825E0F02700B14BC0 /* UIGraphicsImageRenderer+Image.swift */,
 				E54B5BAD25E0F0A300B14BC0 /* String+Cluster.swift */,
-				E54B5BBF25E0F41200B14BC0 /* UIImage+Resize.swift */,
+				E54B5BBF25E0F41200B14BC0 /* UIImage+Enhancements.swift */,
+				E54B5BC425E0FA6D00B14BC0 /* ThreadUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			files = (
 				E54B5B4D25E0B3C100B14BC0 /* Parsing.swift in Sources */,
 				E54B5B4E25E0B3C100B14BC0 /* Request.swift in Sources */,
+				E54B5BC525E0FA6D00B14BC0 /* ThreadUtils.swift in Sources */,
 				E54B5BB325E0F16000B14BC0 /* ClusterAnnotationView.swift in Sources */,
 				E54B5B4A25E0B3C100B14BC0 /* NetworkConstants.swift in Sources */,
 				E54B5BB825E0F1EC00B14BC0 /* MapItemAnnotationView.swift in Sources */,
@@ -402,7 +406,7 @@
 				E54B5BAE25E0F0A300B14BC0 /* String+Cluster.swift in Sources */,
 				E54B5B5525E0B3C100B14BC0 /* ImageFetcher.swift in Sources */,
 				E54B5BA925E0F02700B14BC0 /* UIGraphicsImageRenderer+Image.swift in Sources */,
-				E54B5BC025E0F41200B14BC0 /* UIImage+Resize.swift in Sources */,
+				E54B5BC025E0F41200B14BC0 /* UIImage+Enhancements.swift in Sources */,
 				E54B5B4C25E0B3C100B14BC0 /* NetworkSession.swift in Sources */,
 				E54B5B0125E0B27D00B14BC0 /* AppDelegate.swift in Sources */,
 				E54B5B5325E0B3C100B14BC0 /* TrafficImageRequest.swift in Sources */,

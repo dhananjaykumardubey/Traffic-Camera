@@ -16,21 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pAd-Nb-OT7">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mNo-vc-PFw">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                            </mapView>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R0s-cG-hED">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="230" id="Y9r-m4-Aga"/>
+                                        </constraints>
+                                    </imageView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pAd-Nb-OT7">
+                                        <rect key="frame" x="0.0" y="246" width="414" height="562"/>
+                                    </mapView>
+                                </subviews>
+                            </stackView>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ce-XJ-dAv">
+                                <rect key="frame" x="364" y="98" width="30" height="30"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="g8Z-W8-qky"/>
+                                    <constraint firstAttribute="height" constant="30" id="pda-rj-JDI"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="svJ-Sf-qUL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.79413030565399478" green="0.79413030565399478" blue="0.79413030565399478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pAd-Nb-OT7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2jK-M1-g9W"/>
-                            <constraint firstAttribute="bottom" secondItem="pAd-Nb-OT7" secondAttribute="bottom" id="Avg-RQ-s40"/>
-                            <constraint firstItem="pAd-Nb-OT7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cEJ-L7-jzC"/>
-                            <constraint firstItem="pAd-Nb-OT7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zCs-9r-8zv"/>
+                            <constraint firstItem="mNo-vc-PFw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0Tb-8n-C0l"/>
+                            <constraint firstAttribute="bottom" secondItem="mNo-vc-PFw" secondAttribute="bottom" id="7gS-CU-MY3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ce-XJ-dAv" secondAttribute="trailing" constant="20" id="CLr-5E-2AM"/>
+                            <constraint firstItem="1ce-XJ-dAv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="d38-F9-i6B"/>
+                            <constraint firstItem="mNo-vc-PFw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="giF-SB-srq"/>
+                            <constraint firstItem="mNo-vc-PFw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mH7-Ub-Lpv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qaO-Z3-l8C"/>
                     <connections>
+                        <outlet property="cancelButton" destination="1ce-XJ-dAv" id="iVD-cT-Qqq"/>
+                        <outlet property="contentStackView" destination="mNo-vc-PFw" id="luB-MZ-HAR"/>
+                        <outlet property="imageView" destination="R0s-cG-hED" id="OOY-zu-k53"/>
                         <outlet property="mapView" destination="pAd-Nb-OT7" id="PSf-yZ-Z9j"/>
                     </connections>
                 </viewController>
@@ -58,8 +86,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
