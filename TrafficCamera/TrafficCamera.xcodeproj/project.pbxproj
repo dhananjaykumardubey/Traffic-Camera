@@ -9,12 +9,31 @@
 /* Begin PBXBuildFile section */
 		E54B5B0125E0B27D00B14BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B0025E0B27D00B14BC0 /* AppDelegate.swift */; };
 		E54B5B0325E0B27D00B14BC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B0225E0B27D00B14BC0 /* SceneDelegate.swift */; };
-		E54B5B0525E0B27D00B14BC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B0425E0B27D00B14BC0 /* ViewController.swift */; };
+		E54B5B0525E0B27D00B14BC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B0425E0B27D00B14BC0 /* MapViewController.swift */; };
 		E54B5B0825E0B27D00B14BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54B5B0625E0B27D00B14BC0 /* Main.storyboard */; };
 		E54B5B0A25E0B28000B14BC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54B5B0925E0B28000B14BC0 /* Assets.xcassets */; };
 		E54B5B0D25E0B28000B14BC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54B5B0B25E0B28000B14BC0 /* LaunchScreen.storyboard */; };
 		E54B5B1825E0B28000B14BC0 /* TrafficCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B1725E0B28000B14BC0 /* TrafficCameraTests.swift */; };
 		E54B5B2325E0B28000B14BC0 /* TrafficCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B2225E0B28000B14BC0 /* TrafficCameraUITests.swift */; };
+		E54B5B4A25E0B3C100B14BC0 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B3C25E0B3C100B14BC0 /* NetworkConstants.swift */; };
+		E54B5B4B25E0B3C100B14BC0 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B3D25E0B3C100B14BC0 /* NetworkErrors.swift */; };
+		E54B5B4C25E0B3C100B14BC0 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B3E25E0B3C100B14BC0 /* NetworkSession.swift */; };
+		E54B5B4D25E0B3C100B14BC0 /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B3F25E0B3C100B14BC0 /* Parsing.swift */; };
+		E54B5B4E25E0B3C100B14BC0 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B4025E0B3C100B14BC0 /* Request.swift */; };
+		E54B5B4F25E0B3C100B14BC0 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B4125E0B3C100B14BC0 /* RequestBuilder.swift */; };
+		E54B5B5225E0B3C100B14BC0 /* TrafficImagesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B4525E0B3C100B14BC0 /* TrafficImagesAPIClient.swift */; };
+		E54B5B5325E0B3C100B14BC0 /* TrafficImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B4625E0B3C100B14BC0 /* TrafficImageRequest.swift */; };
+		E54B5B5425E0B3C100B14BC0 /* ContentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B4825E0B3C100B14BC0 /* ContentFetcher.swift */; };
+		E54B5B5525E0B3C100B14BC0 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B4925E0B3C100B14BC0 /* ImageFetcher.swift */; };
+		E54B5B6625E0BC3A00B14BC0 /* TrafficCameras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B6525E0BC3A00B14BC0 /* TrafficCameras.swift */; };
+		E54B5B7125E0BECF00B14BC0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B7025E0BECF00B14BC0 /* Image.swift */; };
+		E54B5B7E25E0C1D700B14BC0 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B7D25E0C1D700B14BC0 /* MapViewModel.swift */; };
+		E54B5B8D25E0D24200B14BC0 /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B8C25E0D24200B14BC0 /* MapItem.swift */; };
+		E54B5BA925E0F02700B14BC0 /* UIGraphicsImageRenderer+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BA825E0F02700B14BC0 /* UIGraphicsImageRenderer+Image.swift */; };
+		E54B5BAE25E0F0A300B14BC0 /* String+Cluster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BAD25E0F0A300B14BC0 /* String+Cluster.swift */; };
+		E54B5BB325E0F16000B14BC0 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BB225E0F16000B14BC0 /* ClusterAnnotationView.swift */; };
+		E54B5BB825E0F1EC00B14BC0 /* MapItemAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BB725E0F1EB00B14BC0 /* MapItemAnnotationView.swift */; };
+		E54B5BC025E0F41200B14BC0 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5BBF25E0F41200B14BC0 /* UIImage+Resize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +57,7 @@
 		E54B5AFD25E0B27D00B14BC0 /* TrafficCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54B5B0025E0B27D00B14BC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54B5B0225E0B27D00B14BC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E54B5B0425E0B27D00B14BC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E54B5B0425E0B27D00B14BC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E54B5B0725E0B27D00B14BC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E54B5B0925E0B28000B14BC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E54B5B0C25E0B28000B14BC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +68,25 @@
 		E54B5B1E25E0B28000B14BC0 /* TrafficCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrafficCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54B5B2225E0B28000B14BC0 /* TrafficCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficCameraUITests.swift; sourceTree = "<group>"; };
 		E54B5B2425E0B28000B14BC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E54B5B3C25E0B3C100B14BC0 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		E54B5B3D25E0B3C100B14BC0 /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		E54B5B3E25E0B3C100B14BC0 /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		E54B5B3F25E0B3C100B14BC0 /* Parsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
+		E54B5B4025E0B3C100B14BC0 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E54B5B4125E0B3C100B14BC0 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		E54B5B4525E0B3C100B14BC0 /* TrafficImagesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficImagesAPIClient.swift; sourceTree = "<group>"; };
+		E54B5B4625E0B3C100B14BC0 /* TrafficImageRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficImageRequest.swift; sourceTree = "<group>"; };
+		E54B5B4825E0B3C100B14BC0 /* ContentFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentFetcher.swift; sourceTree = "<group>"; };
+		E54B5B4925E0B3C100B14BC0 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		E54B5B6525E0BC3A00B14BC0 /* TrafficCameras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficCameras.swift; sourceTree = "<group>"; };
+		E54B5B7025E0BECF00B14BC0 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		E54B5B7D25E0C1D700B14BC0 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		E54B5B8C25E0D24200B14BC0 /* MapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItem.swift; sourceTree = "<group>"; };
+		E54B5BA825E0F02700B14BC0 /* UIGraphicsImageRenderer+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIGraphicsImageRenderer+Image.swift"; sourceTree = "<group>"; };
+		E54B5BAD25E0F0A300B14BC0 /* String+Cluster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Cluster.swift"; sourceTree = "<group>"; };
+		E54B5BB225E0F16000B14BC0 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
+		E54B5BB725E0F1EB00B14BC0 /* MapItemAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemAnnotationView.swift; sourceTree = "<group>"; };
+		E54B5BBF25E0F41200B14BC0 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +137,12 @@
 		E54B5AFF25E0B27D00B14BC0 /* TrafficCamera */ = {
 			isa = PBXGroup;
 			children = (
-				E54B5B0025E0B27D00B14BC0 /* AppDelegate.swift */,
-				E54B5B0225E0B27D00B14BC0 /* SceneDelegate.swift */,
-				E54B5B0425E0B27D00B14BC0 /* ViewController.swift */,
-				E54B5B0625E0B27D00B14BC0 /* Main.storyboard */,
-				E54B5B0925E0B28000B14BC0 /* Assets.xcassets */,
-				E54B5B0B25E0B28000B14BC0 /* LaunchScreen.storyboard */,
-				E54B5B0E25E0B28000B14BC0 /* Info.plist */,
+				E54B5B6125E0BBE300B14BC0 /* Model */,
+				E54B5B3925E0B38400B14BC0 /* Networking */,
+				E54B5B3825E0B35700B14BC0 /* Resources */,
+				E54B5B7825E0C12000B14BC0 /* UI */,
+				E54B5BA725E0EF9C00B14BC0 /* Utilities */,
+				E54B5B7C25E0C1BF00B14BC0 /* ViewModel */,
 			);
 			path = TrafficCamera;
 			sourceTree = "<group>";
@@ -126,6 +163,98 @@
 				E54B5B2425E0B28000B14BC0 /* Info.plist */,
 			);
 			path = TrafficCameraUITests;
+			sourceTree = "<group>";
+		};
+		E54B5B3825E0B35700B14BC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E54B5B0025E0B27D00B14BC0 /* AppDelegate.swift */,
+				E54B5B0225E0B27D00B14BC0 /* SceneDelegate.swift */,
+				E54B5B0925E0B28000B14BC0 /* Assets.xcassets */,
+				E54B5B0B25E0B28000B14BC0 /* LaunchScreen.storyboard */,
+				E54B5B0E25E0B28000B14BC0 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E54B5B3925E0B38400B14BC0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E54B5B4325E0B3C100B14BC0 /* API */,
+				E54B5B4725E0B3C100B14BC0 /* ContentFetcher */,
+				E54B5B3B25E0B3C100B14BC0 /* Foundation */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E54B5B3B25E0B3C100B14BC0 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				E54B5B3C25E0B3C100B14BC0 /* NetworkConstants.swift */,
+				E54B5B3D25E0B3C100B14BC0 /* NetworkErrors.swift */,
+				E54B5B3E25E0B3C100B14BC0 /* NetworkSession.swift */,
+				E54B5B3F25E0B3C100B14BC0 /* Parsing.swift */,
+				E54B5B4025E0B3C100B14BC0 /* Request.swift */,
+				E54B5B4125E0B3C100B14BC0 /* RequestBuilder.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		E54B5B4325E0B3C100B14BC0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E54B5B7025E0BECF00B14BC0 /* Image.swift */,
+				E54B5B4525E0B3C100B14BC0 /* TrafficImagesAPIClient.swift */,
+				E54B5B4625E0B3C100B14BC0 /* TrafficImageRequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E54B5B4725E0B3C100B14BC0 /* ContentFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				E54B5B4825E0B3C100B14BC0 /* ContentFetcher.swift */,
+				E54B5B4925E0B3C100B14BC0 /* ImageFetcher.swift */,
+			);
+			path = ContentFetcher;
+			sourceTree = "<group>";
+		};
+		E54B5B6125E0BBE300B14BC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E54B5B6525E0BC3A00B14BC0 /* TrafficCameras.swift */,
+				E54B5B8C25E0D24200B14BC0 /* MapItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E54B5B7825E0C12000B14BC0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E54B5B0425E0B27D00B14BC0 /* MapViewController.swift */,
+				E54B5BB725E0F1EB00B14BC0 /* MapItemAnnotationView.swift */,
+				E54B5B0625E0B27D00B14BC0 /* Main.storyboard */,
+				E54B5BB225E0F16000B14BC0 /* ClusterAnnotationView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E54B5B7C25E0C1BF00B14BC0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E54B5B7D25E0C1D700B14BC0 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E54B5BA725E0EF9C00B14BC0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E54B5BA825E0F02700B14BC0 /* UIGraphicsImageRenderer+Image.swift */,
+				E54B5BAD25E0F0A300B14BC0 /* String+Cluster.swift */,
+				E54B5BBF25E0F41200B14BC0 /* UIImage+Resize.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +387,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E54B5B0525E0B27D00B14BC0 /* ViewController.swift in Sources */,
+				E54B5B4D25E0B3C100B14BC0 /* Parsing.swift in Sources */,
+				E54B5B4E25E0B3C100B14BC0 /* Request.swift in Sources */,
+				E54B5BB325E0F16000B14BC0 /* ClusterAnnotationView.swift in Sources */,
+				E54B5B4A25E0B3C100B14BC0 /* NetworkConstants.swift in Sources */,
+				E54B5BB825E0F1EC00B14BC0 /* MapItemAnnotationView.swift in Sources */,
+				E54B5B4F25E0B3C100B14BC0 /* RequestBuilder.swift in Sources */,
+				E54B5B7125E0BECF00B14BC0 /* Image.swift in Sources */,
+				E54B5B5425E0B3C100B14BC0 /* ContentFetcher.swift in Sources */,
+				E54B5B0525E0B27D00B14BC0 /* MapViewController.swift in Sources */,
+				E54B5B7E25E0C1D700B14BC0 /* MapViewModel.swift in Sources */,
+				E54B5B5225E0B3C100B14BC0 /* TrafficImagesAPIClient.swift in Sources */,
+				E54B5B4B25E0B3C100B14BC0 /* NetworkErrors.swift in Sources */,
+				E54B5BAE25E0F0A300B14BC0 /* String+Cluster.swift in Sources */,
+				E54B5B5525E0B3C100B14BC0 /* ImageFetcher.swift in Sources */,
+				E54B5BA925E0F02700B14BC0 /* UIGraphicsImageRenderer+Image.swift in Sources */,
+				E54B5BC025E0F41200B14BC0 /* UIImage+Resize.swift in Sources */,
+				E54B5B4C25E0B3C100B14BC0 /* NetworkSession.swift in Sources */,
 				E54B5B0125E0B27D00B14BC0 /* AppDelegate.swift in Sources */,
+				E54B5B5325E0B3C100B14BC0 /* TrafficImageRequest.swift in Sources */,
 				E54B5B0325E0B27D00B14BC0 /* SceneDelegate.swift in Sources */,
+				E54B5B6625E0BC3A00B14BC0 /* TrafficCameras.swift in Sources */,
+				E54B5B8D25E0D24200B14BC0 /* MapItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +585,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TrafficCamera/Info.plist;
+				INFOPLIST_FILE = TrafficCamera/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +603,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TrafficCamera/Info.plist;
+				INFOPLIST_FILE = TrafficCamera/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
