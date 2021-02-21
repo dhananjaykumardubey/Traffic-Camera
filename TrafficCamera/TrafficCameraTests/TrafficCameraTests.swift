@@ -10,24 +10,35 @@ import XCTest
 
 class TrafficCameraTests: XCTestCase {
 
+    private var cameraDetails: TrafficCameras?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        do {
+            self.cameraDetails = try JSONDecoder().decode(TrafficCameras.self, from: Stubbed.successStubbedData)
+            XCTAssertNotNil(self.cameraDetails)
+            XCTAssertEqual(self.cameraDetails?.items.count, 1)
+            XCTAssertEqual(self.cameraDetails?.items.first?.cameras.count, 1)
+        } catch {
+            XCTFail()
         }
     }
-
+    
+    override func tearDownWithError() throws {
+        self.cameraDetails = nil
+    }
+    
+    func testSuccessfulParsing() {
+        guard
+            let cameraItem = self.cameraDetails?.items.first
+        else {
+            XCTFail("cameraItem not there")
+            return
+        }
+        
+        XCTAssertEqual(cameraItem.cameras.count, 1)
+        XCTAssertEqual(cameraItem.cameras.first?.cameraID, "4798")
+        XCTAssertEqual(cameraItem.cameras.first?.location?.latitude, 1.25999999687243)
+        XCTAssertEqual(cameraItem.cameras.first?.location?.longitude, 103.823611110166)
+        XCTAssertEqual(cameraItem.cameras.first?.image, "https://image.png")
+    }
 }

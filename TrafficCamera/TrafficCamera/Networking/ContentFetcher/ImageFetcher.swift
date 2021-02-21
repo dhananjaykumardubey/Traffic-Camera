@@ -9,6 +9,13 @@ class ImageFetcher: ContentFetcher {
     /// Error to be displayed when image downloading fails
     enum ImageFetcherError: Error {
         case unableToFetchImage
+        
+        var errorDescription: String? {
+            switch self {
+            case .unableToFetchImage:
+                return "Unable to fetch the image.\n Please try again later"
+            }
+        }
     }
     
     /// NSCache object used to cache image for key

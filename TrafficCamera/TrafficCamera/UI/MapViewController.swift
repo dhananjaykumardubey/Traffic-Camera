@@ -66,7 +66,6 @@ class MapViewController: UIViewController {
             }
         }
         
-        self.viewModel.fetchTrafficCameras()
         self.viewModel.bindViewModel()
     }
     

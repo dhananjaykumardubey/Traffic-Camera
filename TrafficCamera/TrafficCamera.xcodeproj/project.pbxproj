@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50C1A1E25E1FABD00192C32 /* NetworkSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C1A1D25E1FABD00192C32 /* NetworkSessionMock.swift */; };
+		E50C1A2325E1FE9300192C32 /* Stubbed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C1A2225E1FE9300192C32 /* Stubbed.swift */; };
+		E50C1A2825E1FFBE00192C32 /* TrafficImageRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C1A2725E1FFBE00192C32 /* TrafficImageRequestTests.swift */; };
+		E50C1A3025E219CD00192C32 /* ImageFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C1A2F25E219CD00192C32 /* ImageFetcherTests.swift */; };
+		E50C1A3525E21FDD00192C32 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C1A3425E21FDD00192C32 /* MapViewModelTests.swift */; };
 		E54B5B0125E0B27D00B14BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B0025E0B27D00B14BC0 /* AppDelegate.swift */; };
 		E54B5B0325E0B27D00B14BC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B0225E0B27D00B14BC0 /* SceneDelegate.swift */; };
 		E54B5B0525E0B27D00B14BC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B5B0425E0B27D00B14BC0 /* MapViewController.swift */; };
@@ -55,6 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E50C1A1D25E1FABD00192C32 /* NetworkSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionMock.swift; sourceTree = "<group>"; };
+		E50C1A2225E1FE9300192C32 /* Stubbed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubbed.swift; sourceTree = "<group>"; };
+		E50C1A2725E1FFBE00192C32 /* TrafficImageRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficImageRequestTests.swift; sourceTree = "<group>"; };
+		E50C1A2F25E219CD00192C32 /* ImageFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcherTests.swift; sourceTree = "<group>"; };
+		E50C1A3425E21FDD00192C32 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
 		E54B5AFD25E0B27D00B14BC0 /* TrafficCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54B5B0025E0B27D00B14BC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54B5B0225E0B27D00B14BC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +164,11 @@
 			children = (
 				E54B5B1725E0B28000B14BC0 /* TrafficCameraTests.swift */,
 				E54B5B1925E0B28000B14BC0 /* Info.plist */,
+				E50C1A1D25E1FABD00192C32 /* NetworkSessionMock.swift */,
+				E50C1A2F25E219CD00192C32 /* ImageFetcherTests.swift */,
+				E50C1A2225E1FE9300192C32 /* Stubbed.swift */,
+				E50C1A2725E1FFBE00192C32 /* TrafficImageRequestTests.swift */,
+				E50C1A3425E21FDD00192C32 /* MapViewModelTests.swift */,
 			);
 			path = TrafficCameraTests;
 			sourceTree = "<group>";
@@ -421,6 +436,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54B5B1825E0B28000B14BC0 /* TrafficCameraTests.swift in Sources */,
+				E50C1A3525E21FDD00192C32 /* MapViewModelTests.swift in Sources */,
+				E50C1A3025E219CD00192C32 /* ImageFetcherTests.swift in Sources */,
+				E50C1A2325E1FE9300192C32 /* Stubbed.swift in Sources */,
+				E50C1A1E25E1FABD00192C32 /* NetworkSessionMock.swift in Sources */,
+				E50C1A2825E1FFBE00192C32 /* TrafficImageRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

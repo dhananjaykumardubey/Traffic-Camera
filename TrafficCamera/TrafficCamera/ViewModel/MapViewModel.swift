@@ -38,10 +38,6 @@ class MapViewModel {
     
     /// BindViewModel call to let viewmodel know that bindViewModel of viewcontroller is called and completed and properties can be observed
     func bindViewModel() {
-       
-    }
-    
-    func fetchTrafficCameras() {
         self.apiClient?.fetchTrafficCameras({ [weak self] response in
             guard let _self = self else {
                 return
@@ -71,7 +67,7 @@ class MapViewModel {
         }
     }
     
-    private func parseFetchedCameraDetails(_ cameraDetails: TrafficCameras) {
+    func parseFetchedCameraDetails(_ cameraDetails: TrafficCameras) {
         guard !cameraDetails.items.isEmpty,
               let cameraItem = cameraDetails.items.first,
               !cameraItem.cameras.isEmpty
