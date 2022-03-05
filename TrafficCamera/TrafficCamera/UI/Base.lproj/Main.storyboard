@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PxM-Y4-uP5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="TrafficCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mNo-vc-PFw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R0s-cG-hED">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="230" id="Y9r-m4-Aga"/>
+                                        </constraints>
+                                    </imageView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pAd-Nb-OT7">
+                                        <rect key="frame" x="0.0" y="246" width="414" height="562"/>
+                                    </mapView>
+                                </subviews>
+                            </stackView>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ce-XJ-dAv">
+                                <rect key="frame" x="364" y="98" width="30" height="30"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="g8Z-W8-qky"/>
+                                    <constraint firstAttribute="height" constant="30" id="pda-rj-JDI"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="svJ-Sf-qUL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.79413030565399478" green="0.79413030565399478" blue="0.79413030565399478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mNo-vc-PFw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0Tb-8n-C0l"/>
+                            <constraint firstAttribute="bottom" secondItem="mNo-vc-PFw" secondAttribute="bottom" id="7gS-CU-MY3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ce-XJ-dAv" secondAttribute="trailing" constant="20" id="CLr-5E-2AM"/>
+                            <constraint firstItem="1ce-XJ-dAv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="d38-F9-i6B"/>
+                            <constraint firstItem="mNo-vc-PFw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="giF-SB-srq"/>
+                            <constraint firstItem="mNo-vc-PFw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mH7-Ub-Lpv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qaO-Z3-l8C"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="1ce-XJ-dAv" id="iVD-cT-Qqq"/>
+                        <outlet property="contentStackView" destination="mNo-vc-PFw" id="luB-MZ-HAR"/>
+                        <outlet property="imageView" destination="R0s-cG-hED" id="OOY-zu-k53"/>
+                        <outlet property="mapView" destination="pAd-Nb-OT7" id="PSf-yZ-Z9j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="60.9375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="35I-uI-NdF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PxM-Y4-uP5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yom-om-wcf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B6r-Ey-iUr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9c-K6-XsC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.608695652173921" y="60.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
